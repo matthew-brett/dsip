@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>License &#8212; Data Science in Practice</title>
+    <title>Installation on Windows &#8212; Data Science in Practice</title>
   
   
   
@@ -61,8 +61,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'license';</script>
-    <link rel="canonical" href="https://lisds.github.io/textbook/license.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'installation_on_windows';</script>
+    <link rel="canonical" href="https://lisds.github.io/textbook/installation_on_windows.html" />
     <link rel="shortcut icon" href="_static/dsfe_favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -226,7 +226,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/lisds/textbook/edit/main/license.md" target="_blank"
+      <li><a href="https://github.com/lisds/textbook/edit/main/installation_on_windows.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -243,7 +243,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/lisds/textbook/issues/new?title=Issue%20on%20page%20%2Flicense.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/lisds/textbook/issues/new?title=Issue%20on%20page%20%2Finstallation_on_windows.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -273,7 +273,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/license.md" target="_blank"
+      <li><a href="_sources/installation_on_windows.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -355,7 +355,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>License</h1>
+    <h1>Installation on Windows</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -365,7 +365,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#not-otherwise-specified-license">Not-otherwise-specified license</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powershell">Powershell</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-10">Windows 10</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-11">Windows 11</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chocalatey">Chocalatey</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-and-python">Git and Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-python-exe-to-python3-exe">Copy python.exe to python3.exe</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-long-hand-way">The long-hand way</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copying-the-short-hand-way">Copying the short-hand way</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check">Check</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-finish">To finish</a></li>
 </ul>
             </nav>
         </div>
@@ -377,13 +390,126 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="license">
-<h1>License<a class="headerlink" href="#license" title="Permalink to this heading">#</a></h1>
-<section id="not-otherwise-specified-license">
-<h2>Not-otherwise-specified license<a class="headerlink" href="#not-otherwise-specified-license" title="Permalink to this heading">#</a></h2>
-<p>When not specified otherwise, the material for this course is licensed under
-the CC-BY 4.0 license, available at
-<a class="reference external" href="https://creativecommons.org/licenses/by/4.0">https://creativecommons.org/licenses/by/4.0</a>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="installation-on-windows">
+<h1>Installation on Windows<a class="headerlink" href="#installation-on-windows" title="Permalink to this heading">#</a></h1>
+<section id="powershell">
+<h2>Powershell<a class="headerlink" href="#powershell" title="Permalink to this heading">#</a></h2>
+<p>Powershell is a Windows utility that allows you to type commands at a command
+line prompt.  These types of applications are called <em>terminals</em> — because
+they used to be the main way the people interacted with computers via computer
+terminals.</p>
+<section id="windows-10">
+<h3>Windows 10<a class="headerlink" href="#windows-10" title="Permalink to this heading">#</a></h3>
+<p>To start Windows Powershell on Windows 10:</p>
+<ul>
+<li><p>Click on the Windows search bar, type “powershell”.</p>
+<p><img alt="" src="_images/powershell_windows_10.png" /></p>
+<p>Notice that you want the “Windows Powershell” application, not “Windows
+Powershell ISE”.</p>
+</li>
+<li><p>Then press return to run Powershell, or select “Run as Administrator” if
+you need to run administrator commands.  Usually prefer the normal mode (not administrator mode).</p></li>
+<li><p>You should see a prompt a little like this:</p>
+<p><img alt="" src="_images/powershell_prompt.png" /></p>
+</li>
+</ul>
+</section>
+<section id="windows-11">
+<h3>Windows 11<a class="headerlink" href="#windows-11" title="Permalink to this heading">#</a></h3>
+<p>To start Windows Powershell on Windows 11, use “Windows Terminal”.  It is the
+most convenient way to start Powershell.   Follow one of the methods in <a class="reference external" href="https://www.howtogeek.com/831728/7-ways-to-open-windows-terminal-on-windows-11">this
+How-To Geek
+page</a>.  We recommend the second method: “From the Power User Menu”.</p>
+</section>
+</section>
+<section id="chocalatey">
+<h2>Chocalatey<a class="headerlink" href="#chocalatey" title="Permalink to this heading">#</a></h2>
+<p>We suggest you use <a class="reference external" href="https://chocolatey.org/">Chocolatey</a> to install Git and
+Python.</p>
+<p>Go to the <a class="reference external" href="https://chocolatey.org/install">Choclately install page</a> and follow
+the instructions there.  Choose the ‘individual’ install.</p>
+<p>To do the install, as that page says, open a Powershell window with
+Administrator permissions.  For example, press the Windows key, type
+“powershell”, right-click on the “Windows PowerShell” option, chose “Run as
+administrator”.</p>
+<p>A Powershell window will open.  Continue with the Choco install instructions, including checking, maybe setting the <code class="docutils literal notranslate"><span class="pre">ExecutionPolicy</span></code>.</p>
+</section>
+<section id="git-and-python">
+<h2>Git and Python<a class="headerlink" href="#git-and-python" title="Permalink to this heading">#</a></h2>
+<p>In the same, or a new Powershell administrator window, type:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">choco</span> <span class="n">install</span> <span class="n">-y</span> <span class="n">git</span> <span class="n">python</span>
+</pre></div>
+</div>
+<p><strong>Close the Powershell, and open it again, again with Administrator
+privileges.</strong></p>
+<p>To check the install, type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">get</span><span class="o">-</span><span class="n">command</span> <span class="n">python</span>
+</pre></div>
+</div>
+<p>This should show something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CommandType</span>     <span class="n">Name</span>         <span class="n">Version</span>    <span class="n">Source</span>
+<span class="o">-----------</span>     <span class="o">----</span>         <span class="o">-------</span>    <span class="o">------</span>
+<span class="n">Application</span>     <span class="n">python</span><span class="o">.</span><span class="n">exe</span>   <span class="mf">3.10.41</span><span class="o">...</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Python310</span>\<span class="n">python</span><span class="o">.</span><span class="n">exe</span>
+</pre></div>
+</div>
+<p>If, instead, you see a value for “Source” that starts
+<code class="docutils literal notranslate"><span class="pre">C:\Users\scipy\AppData\Local\Microsoft...</span></code>, either your install has failed,
+or you have forgotten to close and restart the Powershell window after doing
+the <code class="docutils literal notranslate"><span class="pre">choco</span> <span class="pre">install</span></code> step.  Just in case, do that now, and recheck the command
+above.</p>
+</section>
+<section id="copy-python-exe-to-python3-exe">
+<h2>Copy python.exe to python3.exe<a class="headerlink" href="#copy-python-exe-to-python3-exe" title="Permalink to this heading">#</a></h2>
+<section id="the-long-hand-way">
+<h3>The long-hand way<a class="headerlink" href="#the-long-hand-way" title="Permalink to this heading">#</a></h3>
+<p>The output of <code class="docutils literal notranslate"><span class="pre">get-command</span> <span class="pre">python</span></code> above has shown you where Choco installed Python.  For example, as you’ve already seen, I got:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CommandType</span>     <span class="n">Name</span>         <span class="n">Version</span>    <span class="n">Source</span>
+<span class="o">-----------</span>     <span class="o">----</span>         <span class="o">-------</span>    <span class="o">------</span>
+<span class="n">Application</span>     <span class="n">python</span><span class="o">.</span><span class="n">exe</span>   <span class="mf">3.10.41</span><span class="o">...</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Python310</span>\<span class="n">python</span><span class="o">.</span><span class="n">exe</span>
+</pre></div>
+</div>
+<p>If, instead, you see a value for “Source” that starts
+<code class="docutils literal notranslate"><span class="pre">C:\Users\scipy\AppData\Local\Microsoft</span> <span class="pre">...</span></code>, either your install has failed,
+or you have forgotten to close and restart the Powershell window after doing
+the <code class="docutils literal notranslate"><span class="pre">choco</span> <span class="pre">install</span></code> step.  Just in case, do that now, and recheck the command
+above.</p>
+<p>In my case, as you see above, Python was at <code class="docutils literal notranslate"><span class="pre">c:\Python310\python.exe</span></code></p>
+<p>Go to the directory containing Python.  In my case this was <code class="docutils literal notranslate"><span class="pre">c:\Python310</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">c</span><span class="p">:</span>\<span class="n">Python310</span>
+</pre></div>
+</div>
+<p>Then copy the <code class="docutils literal notranslate"><span class="pre">python.exe</span></code> file to <code class="docutils literal notranslate"><span class="pre">python3.exe</span></code>, so <code class="docutils literal notranslate"><span class="pre">python3</span></code> will also run the Python command.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="n">python</span><span class="o">.</span><span class="n">exe</span> <span class="n">python3</span><span class="o">.</span><span class="n">exe</span>
+</pre></div>
+</div>
+</section>
+<section id="copying-the-short-hand-way">
+<h3>Copying the short-hand way<a class="headerlink" href="#copying-the-short-hand-way" title="Permalink to this heading">#</a></h3>
+<p>If you prefer, you can do this copy step by copy-pasting the code below to the
+administrator Powershell prompt, and pressing Enter:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nv">$py_path</span> <span class="p">=</span> <span class="p">(</span><span class="nb">get-command</span> <span class="n">-CommandType</span> <span class="n">Application</span> <span class="n">-TotalCount</span> <span class="n">1</span> <span class="n">python</span><span class="p">).</span><span class="n">Source</span>
+<span class="nb">cp </span><span class="nv">$py_path</span> <span class="p">((</span><span class="nb">Split-Path</span> <span class="nv">$py_path</span><span class="p">)</span> <span class="p">+</span> <span class="s1">&#39;\python3.exe&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="check">
+<h2>Check<a class="headerlink" href="#check" title="Permalink to this heading">#</a></h2>
+<p>Close the administrator Powershell window.</p>
+<p>Open a new PowerShell window, not as administrator.  Try this command:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">get-command</span> <span class="n">python3</span>
+</pre></div>
+</div>
+<p>You should see something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CommandType</span>     <span class="n">Name</span>         <span class="n">Version</span>    <span class="n">Source</span>
+<span class="o">-----------</span>     <span class="o">----</span>         <span class="o">-------</span>    <span class="o">------</span>
+<span class="n">Application</span>     <span class="n">python3</span><span class="o">.</span><span class="n">exe</span>  <span class="mf">3.10.41</span><span class="o">...</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Python310</span>\<span class="n">python3</span><span class="o">.</span><span class="n">exe</span>
+</pre></div>
+</div>
+</section>
+<section id="to-finish">
+<h2>To finish<a class="headerlink" href="#to-finish" title="Permalink to this heading">#</a></h2>
+<p>Close the Powershell.  All done.</p>
 </section>
 </section>
 
@@ -436,7 +562,20 @@ the CC-BY 4.0 license, available at
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#not-otherwise-specified-license">Not-otherwise-specified license</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powershell">Powershell</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-10">Windows 10</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-11">Windows 11</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chocalatey">Chocalatey</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-and-python">Git and Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-python-exe-to-python3-exe">Copy python.exe to python3.exe</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-long-hand-way">The long-hand way</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copying-the-short-hand-way">Copying the short-hand way</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check">Check</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-finish">To finish</a></li>
 </ul>
   </nav></div>
 
