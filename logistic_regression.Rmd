@@ -49,7 +49,7 @@ category.  Some examples are:
 For this tutorial, we return to the [chronic kidney disease
 dataset](../data/chronic_kidney_disease), which you have seen previously.
 
-Each oberservational unit in this dataset is one patient.
+Each observational unit in this dataset is one patient.
 
 For each patient, the doctors recorded whether or not the patient had chronic
 kidney disease. This is a *binary categorical variable*; you can see the
