@@ -48,7 +48,8 @@ category.  Some examples are:
 * Did a person with a conviction for one offense offend again ("yes" or "no")?
 
 For this tutorial, we return to the [chronic kidney disease
-dataset](../data/chronic_kidney_disease), which you have seen previously.
+dataset]( https://lisds.github.io/textbook/data/chronic_kidney_disease), which
+you have seen previously.
 
 Each observational unit in this dataset is one patient.
 
@@ -259,7 +260,8 @@ What would happen if we tried to use linear regression to predict the
 appetite scores, based on hemoglobin concentrations?
 
 Let us start by grabbing the our familiar `ss_any_line` function from the
-[Using minimize page](../mean-slopes/using_minimize.Rmd).
+[Using minimize
+page](https://lisds.github.io/textbook/mean-slopes/using_minimize).
 
 ```{python}
 def ss_any_line(intercept_and_slope, x_values, y_values):
@@ -1607,7 +1609,8 @@ goes up when likelihood goes up, and goes down when likelihood goes down,
 Specifically we want the value that comes back from the cost function to vary
 [monotonically](https://en.wikipedia.org/wiki/Monotonic_function) with respect
 to the likelihood.  See the {ref}`discussion on monotonicity <monotonicity>` in
-the [Sum of squares, root mean square](../mean-slopes/sse_rmse) page.
+the [Sum of squares, root mean
+square](https://lisds.github.io/textbook//mean-slopes/sse_rmse) page.
 
 In our case you may be able to see that the likelihood and *log likelihood* are
 monotonic with respect to each other, so if we find the parameters minimizing
