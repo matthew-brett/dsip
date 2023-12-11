@@ -453,10 +453,10 @@ Chinstrap and Gentoo penguins, as it moves through the 2D space of parameters
 all_params = df[['body_mass_g', 'bill_depth_mm']].describe()
 bm_x = np.linspace(all_params.loc['min', 'body_mass_g'],
                    all_params.loc['max', 'body_mass_g'],
-                   100)
+                   50)
 bm_y = np.linspace(all_params.loc['min', 'bill_depth_mm'],
                    all_params.loc['max', 'bill_depth_mm'],
-                   100)
+                   50)
 x, y = np.meshgrid(bm_x, bm_y)
 xy = np.stack((x.ravel(), y.ravel()), axis=1)
 xy_df = pd.DataFrame(xy, columns=X_test.columns)
@@ -472,4 +472,8 @@ sns.scatterplot(x=xy[:, 0], y=xy[:, 1],
                 hue=test_model.predict(xy_df),
                 palette=sns.color_palette()[:2],
                 alpha=0.1);
+```
+
+```{python}
+
 ```
