@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 In this exercise you will perform some simple logistic regression analysis using
 the new workflow (e.g. using the command line, scripts, git and github).
 
