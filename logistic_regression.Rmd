@@ -715,7 +715,7 @@ Let's demonstrate this in python:
 (1 - p) == 80/100
 ```
 
-When you are interpretting odds:  
+When you are interpreting odds:  
 
 **Odds of 1 indicate that the event of interest is equally as likely as events NOT of interest.**
 
@@ -1264,7 +1264,7 @@ pd.DataFrame({'Log Odds Prediction': log_odds_predictions,
 ```
 
 Remember, the probability predictions are the predicted probabilities of `appetite_d == 1`. 
-Let's name the predictions appropraitely to remind ourselves:
+Let's name the predictions appropriately to remind ourselves:
 
 ```{python}
 predicted_prob_of_1 = sigmoid_p_predictions

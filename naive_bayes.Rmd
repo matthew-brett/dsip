@@ -24,7 +24,7 @@ pd.set_option('mode.copy_on_write', True)
 ```
 
 Also see: [Naive Bayes
-classifers](https://jakevdp.github.io/PythonDataScienceHandbook/05.05-naive-bayes.html)
+classifiers](https://jakevdp.github.io/PythonDataScienceHandbook/05.05-naive-bayes.html)
 in the [Python Data Science
 Handbook](https://jakevdp.github.io/PythonDataScienceHandbook).
 
@@ -311,7 +311,7 @@ np.mean(df['sklearn_predictions'] == df['species'])
 df
 ```
 
-## Puting the naïve into "naïve Bayes"
+## Putting the naïve into "naïve Bayes"
 
 Now, let's also consider the `bill_depth_mm` values:
 
