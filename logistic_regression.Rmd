@@ -824,8 +824,8 @@ Our next step is to apply a *logarithm* transformation.
 
 ## The logarithm transform
 
-See the [logarithm refresher](logarithms_refreshed) page for more background on
-logarithms.
+See the [logarithm refresher](https://lisds.github.io/textbook/more-regression/logarithms_refreshed) page for
+more background on logarithms.
 
 For now, **the only thing you need to know about logarithms is that they are
 transformations that convert an exponential curve into a straight line**. 
@@ -942,7 +942,8 @@ We also want to be able to go backwards, from the straight-line predictions, to
 the sigmoid predictions.
 
 `np.exp` reverses (inverts) the `np.log` transformation (see the [logarithm
-refresher](logarithms_refreshed) page):
+refresher]((https://lisds.github.io/textbook/more-regression/logarithms_refreshed)
+page):
 
 ```{python}
 # np.exp reverses the effect of np.log.
@@ -1241,9 +1242,10 @@ squares? E.g. could we use a different cost function which would work better?
 
 It turns out there is another quite different and very useful way to score the
 predictions, called *likelihood*.  For reasons we discuss in [this
-page](logistic_convexity), all standard implementations of logistic regression
-that we know of, use the *likelihood* measure that we describe below, instead
-of the sum of squares measure you see above.
+page](https://lisds.github.io/textbook/more-regression/logistic_convexity), all
+standard implementations of logistic regression that we know of, use the
+*likelihood* measure that we describe below, instead of the sum of squares
+measure you see above.
 
 Likelihood asks the question: assuming our predicting line, how likely  is the
 sequence of actual 0 and 1 values that we see?
@@ -1608,9 +1610,8 @@ goes up when likelihood goes up, and goes down when likelihood goes down,
 
 Specifically we want the value that comes back from the cost function to vary
 [monotonically](https://en.wikipedia.org/wiki/Monotonic_function) with respect
-to the likelihood.  See the {ref}`discussion on monotonicity <monotonicity>` in
-the [Sum of squares, root mean
-square](https://lisds.github.io/textbook//mean-slopes/sse_rmse) page.
+to the likelihood.  See the discussion on monotonicity in the [Sum of squares,
+root mean square](https://lisds.github.io/textbook//mean-slopes/sse_rmse) page.
 
 In our case you may be able to see that the likelihood and *log likelihood* are
 monotonic with respect to each other, so if we find the parameters minimizing
