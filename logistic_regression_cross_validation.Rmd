@@ -42,7 +42,7 @@ On this page we will do the following:
 - fit a two predictor logistic regression, to see how it works with more than one predictor
 - look at model evaluation and selection techniques to decided which model is better (e.g. do we need the second predictor)?
 
-First, let's improt some libraries/functions to set up the page:
+First, let's import some libraries/functions to set up the page:
 
 ```{python}
 import numpy as np
@@ -103,7 +103,7 @@ def plotly_3D_with_plane(dataset, x1_string, x2_string, y_string, hover_string_l
 
 ## More Logistic Regression 
 
-The dataset we will use for this page is a historical social science dataset about the Titanic disaster. Information about the dataset can be found [here](https://matthew-brett.github.io/cfd2020/data/titanic.html). A desciption of the variables in the dataset is below:
+The dataset we will use for this page is a historical social science dataset about the Titanic disaster. Information about the dataset can be found [here](https://matthew-brett.github.io/cfd2020/data/titanic.html). A description of the variables in the dataset is below:
 
 `name` - Passenger Name
 
@@ -566,7 +566,7 @@ px.scatter_3d(sample_df, 'fare','age', 'survived_dummy', hover_data=['survived']
                               symbol_map={1:'x', 0:'o'}).update_layout(scene={'zaxis': {"tickvals":[0, 1]}})
 ```
 
-We can modifiy our cost function to accept two predictors. To do this, we just
+We can modify our cost function to accept two predictors. To do this, we just
 add some extra arguments, and include the new predictor and its slope in the
 calculation of the predictor log odds scores.
  
@@ -669,7 +669,7 @@ plotly_3D_with_plane(sample_df, 'fare','age', 'survived_dummy', ['survived'],
 
 The advantage of a generalized linear model is that it let's us use the machinery of linear regression with different types of outcome variable.
 
-- we can inclue categorical predictors in the same way as for linear regression
+- we can include categorical predictors in the same way as for linear regression
 - the "other predictors being equal" interpretation still applies to the slopes e.g. each slope now tells us the predicted change in the odds of survival for a 1-unit change in the predictor, holding all other predictors constant
 
 
@@ -848,7 +848,7 @@ plt.ylabel('Survived Dummy\n{1 == Yes; 0 == No}');
 ```
 
 ```{python}
-# calcuate the accuracy from the single predictor model
+# calculate the accuracy from the single predictor model
 (confusion_matrix_1_predictor[0, 0] + confusion_matrix_1_predictor[1, 1])/np.sum(confusion_matrix_1_predictor)
 ```
 
@@ -872,7 +872,7 @@ To avoid overfitting, we can use a test/train split. This involves splitting the
 
 ![](images/test-train-split.PNG)
 
-We then aim, through model comparison, to find the model that has the best "sweet spot" betwee complexity, and performance when predicting the unseen values in the test set:
+We then aim, through model comparison, to find the model that has the best "sweet spot" between complexity, and performance when predicting the unseen values in the test set:
 
 ![](images/overfitting-underfitting.PNG)
 
