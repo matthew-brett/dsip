@@ -193,9 +193,7 @@ def plot_scatter(log_odds=False):
         # Build plot, add custom labels.
         colors = sample_df['survived_dummy'].replace([1, 0], ['red', 'blue'])
         pd.DataFrame({'fare':fare,
-                     'log_odds_of_survival': log_odds_predictions_single_predictor}).plot.scatter('fare',
-                                                                                                 'log_odds_of_survival',
-                                                                                                  c=colors)
+                     'log_odds_of_survival': log_odds_predictions_single_predictor}).plot.scatter('fare', 'log_odds_of_survival', c=colors)
         plt.ylabel('Predicted Log odds of Survival')
         # Put a custom legend on the plot.  This code is a little obscure.
         plt.scatter([], [], c='blue', label='NO')
@@ -317,13 +315,14 @@ So logistic regression in the present case tells us:
 - the odds of survival, conditional on `fare`
 - the probability of survival, conditional on `fare`
 
-After fitting the model, the parameters come to us on the log odds scal. The mathematical notation for the log odds predictions is:
+After fitting the model, the parameters come to us on the log odds scale. The
+mathematical notation for the log odds predictions is:
 
 $ \text{log odds}(y_i == 1) = b_0 + b_1 * x_1$
 
-Which in pythonic terms if:
+Which in pythonic terms is:
 
-$ \text{log odds of survival} = b_0 + b_1 *$ `fare`
+$ \text{log odds of survival} = b_0 + b_1 * $ `fare`
 
 Let's generate these predictions from our parameters:
 
@@ -454,7 +453,8 @@ plt.legend(loc=(1.1, 0.5))
 plt.title('Predicted Probability of Survival/Death');
 ```
 
-These two cruves provide a graphical explanation of how the logistic regression cost function works.
+These two curves provide a graphical explanation of how the logistic regression
+cost function works.
 
 For each observational unit (passenger), we have two predicted probabilities: $\text{P(Survival)}$ and $\text{P(Death)}$
 
@@ -498,14 +498,14 @@ This is how the fit of the of the current slope/intercept pair is evaluated:
 We compare the likelihood given by different slope/intercept pairs, and see which pair generates the best-fitting sigmoid curve.
  
 However, multiplying together lots of very small numbers can be difficult for a computer to deal with.
-In practice, to make the computations easier for a computer, we `minimize` the negative log-likehood. For each
+In practice, to make the computations easier for a computer, we `minimize` the negative log-likelihood. For each
 observational unit, the log-likelihood is:
 
 $\text{If the passenger survived, it is np.log(P(Survived))}$
 
 $\text{If the passenger died, it is np.log(P(Death))}$
 
-We then add these log-likehoods together, and take the negative of the result (e.g. we just add a minus sign/multiply by minus 1).
+We then add these log-likelihoods together, and take the negative of the result (e.g. we just add a minus sign/multiply by minus 1).
 
 This gives us the same parameters as finding the maximum likelihood, but is much easier for a computer to work with.
 
@@ -705,7 +705,7 @@ goodness-of-fit to complexity (more on this later)!.
 is fit to a binary categorical outcome variable); to which we will now turn.
 
 
-### Accurary (for models with a categorical outcome variable)
+### Accuracy (for models with a categorical outcome variable)
 
 We can use the `predict()` method from a `statsmodels` fitted model, to generated predicted/fitted values from that model.
 
@@ -932,7 +932,7 @@ X_test_2 = X_test['fare']
 # fit a logistic regression to the training data
 model = LogisticRegression().fit(X_train_2.values.reshape(-1, 1),  y_train)
 
-# evauate the perform against the test data
+# evaluate the perform against the test data
 y_test_predictions = model.predict(X_test_2.values.reshape(-1, 1))
 accuracy_score(y_test, y_test_predictions)
 ```
@@ -967,7 +967,7 @@ survived_fare_age_cross_val = cross_val_score(LogisticRegression(),
                                         sample_df['survived_dummy'],
                                         cv=5,
                                       scoring='accuracy')
-# show the cross validaton result
+# show the cross validation result
 survived_fare_age_cross_val
 ```
 
@@ -1067,7 +1067,7 @@ for model in model_list:
 results_df.T
 ```
 
-# Other ways of model-building
+## Other ways of model-building
 
 A different method of model building involves the Akaike Information Criterion:
 
@@ -1133,8 +1133,4 @@ fitted_log_reg_mod_single_predictor.summary()
 ```{python}
 # show the AIC of the single predictor model (compare this to that of the two predictor model - lower is better!)
 fitted_log_reg_mod_single_predictor.aic
-```
-
-```{python}
-
 ```
