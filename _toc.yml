@@ -20,10 +20,13 @@ parts:
   - file: numpy_and_vectors
   - file: algebra_of_sums
   - file: lin_regression_notation
+- caption: Intermediate regression
+  chapters:
   - file: lin_regression_multiple_predictors
+  - file: epl_modeling
   - file: linear_regression_categorical_predictors
   - file: multiple_predictors_statistical_adjustment
-  - file: epl_modeling
+  - file: logistic_regression_cross_validation
 - caption: Working with data
   chapters:
   - file: data_work
