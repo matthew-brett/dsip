@@ -16,3 +16,4 @@ okpy
 jupytext
 jupyterlab
 seaborn
+plotly
