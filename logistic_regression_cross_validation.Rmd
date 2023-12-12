@@ -1021,15 +1021,15 @@ y = df['survived_dummy']
 results_df = pd.DataFrame()
 for model in model_list:
     X_current_model = X[model].values
-    
-    jupyprint(f'#### Model: survived ~ {" + ".join(model)}')
-    
+
+    jupyprint(f'==== Model: survived ~ {" + ".join(model)}')
+
     current_model_cross_val_score = cross_val_score(LogisticRegression(),
                                                       X_current_model,
                                                       y,
                                                       cv=5,
                                                       scoring='accuracy').mean()
-    
+
     jupyprint(f'Accuracy = {current_model_cross_val_score}')
     results_df[' + '.join(model)] = [current_model_cross_val_score]
 
@@ -1051,19 +1051,19 @@ from sklearn.naive_bayes import GaussianNB
 results_df = pd.DataFrame()
 for model in model_list:
     X_current_model = X[model].values
-    
-    jupyprint('## Naive Bayes Classifier')
-    jupyprint(f'#### Model: survived ~ {" + ".join(model)}')
-    
+
+    jupyprint('== Naive Bayes Classifier')
+    jupyprint(f'==== Model: survived ~ {" + ".join(model)}')
+
     current_model_cross_val_score = cross_val_score(GaussianNB(),
                                                       X_current_model,
                                                       y,
                                                       cv=5,
                                                       scoring='accuracy').mean()
-    
+
     jupyprint(f'Accuracy = {current_model_cross_val_score}')
     results_df[' + '.join(model)] = [current_model_cross_val_score]
-    
+
 results_df.T
 ```
 
