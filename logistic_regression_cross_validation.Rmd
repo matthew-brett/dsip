@@ -870,11 +870,11 @@ More often, simpler models will generalize better.
 
 To avoid overfitting, we can use a test/train split. This involves splitting the data (for instance, we might use 80% of the data as a training set and 20% as a test set). We train/fit the model to the training data and then evaluate it against the test data. This allows us to simulate the process of evaluating the model against unseen data from the same population:
 
-![](images/test-train-split.PNG)
+![](images/test-train-split.png)
 
 We then aim, through model comparison, to find the model that has the best "sweet spot" between complexity, and performance when predicting the unseen values in the test set:
 
-![](images/overfitting-underfitting.PNG)
+![](images/overfitting-underfitting.png)
 
 
 We can create a test/train split manually, using indexing:
@@ -952,7 +952,7 @@ This is where we use a variety of different test/train splits on the same datase
 
 Here is an illustration, each block represents the whole sample, the white part is the training set, and the blue part is the test set.
 
-![](images/cross-validation.PNG)
+![](images/cross-validation.png)
 
 Through fitting a model to each "fold" of the cross-validation (e.g. fitting the model to the training component, and then evaluating it against the test component, on each trial) we get a better estimate of how well the model will generalize to unseen data.
 
