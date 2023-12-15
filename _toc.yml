@@ -27,6 +27,10 @@ parts:
   - file: linear_regression_categorical_predictors
   - file: multiple_predictors_statistical_adjustment
   - file: logistic_regression_cross_validation
+- caption: Classification
+  chapters:
+  - caption: naive_bayes
+  - caption: k_means
 - caption: Working with data
   chapters:
   - file: data_work
