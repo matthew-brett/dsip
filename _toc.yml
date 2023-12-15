@@ -29,8 +29,8 @@ parts:
   - file: logistic_regression_cross_validation
 - caption: Classification
   chapters:
-  - caption: naive_bayes
-  - caption: k_means
+  - file: naive_bayes
+  - file: k_means
 - caption: Working with data
   chapters:
   - file: data_work
