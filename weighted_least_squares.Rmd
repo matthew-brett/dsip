@@ -37,16 +37,19 @@ df
 Fit the model with Statsmodels.
 
 ```{python}
+
 ```
 
 Fit the same model with Scikit-learn.
 
 ```{python}
+
 ```
 
 Compare the parameters to Statsmodels.
 
 ```{python}
+
 ```
 
 ## The fitted values and Scikit-learn
@@ -54,25 +57,30 @@ Compare the parameters to Statsmodels.
 The values predicted by the (Sklearn) model:
 
 ```{python}
+
 ```
 
 Compare to Statsmodels:
 
 ```{python}
+
 ```
 
 Write a function to compute the fitted values given the parameters:
 
 
 ```{python}
+
 ```
 
 Compile Sklearn parameters, and use these to calculated fitted values with our function.  Compare, to show they are (near as dammit) similar.
 
 ```{python}
+
 ```
 
 ```{python}
+
 ```
 
 ## The long and the short of R^2^
@@ -80,17 +88,21 @@ Compile Sklearn parameters, and use these to calculated fitted values with our f
 Sklearn has an `r2_score` metric.
 
 ```{python}
+
 ```
 
 We already know the formula for R^2^.  We can calculate by hand to show this gives the same answer.
 
 ```{python}
+
 ```
 
 ```{python}
+
 ```
 
 ```{python}
+
 ```
 
 ### R^2^ for another, reduced model
@@ -98,50 +110,46 @@ We already know the formula for R^2^.  We can calculate by hand to show this giv
 Fit a reduced model that is just "Clarity" without "Easiness".
 
 ```{python}
+
 ```
 
 Calculate R^2^ for reduced model as compared to our full model.
 
 ```{python}
+
 ```
 
 ```{python}
+
 ```
 
 ## On weights, and a weighted mean
 
 This is the usual mean:
 
-```{python}
-quality.mean()
-```
 
 Of course this is the same as:
 
-```{python}
-n = len(quality)
-quality.sum() / n
-```
 
 or
 
-```{python}
-(quality * 1 / n).sum()
-```
 
 Calculate weights to weight values by number of professors, on the basis that larger number of professors may give more reliable values.
 
 ```{python}
+
 ```
 
 Calculate weighted mean.
 
 ```{python}
+
 ```
 
 Numpy's version of same:
 
 ```{python}
+
 ```
 
 ## Fitting the model with minimize
@@ -149,22 +157,27 @@ Numpy's version of same:
 A function for Sum of Squares, to use with `minimize`.
 
 ```{python}
+
 ```
 
 Use `sos` function, in example call, and then with `minimize`.
 
 ```{python}
+
 ```
 
 ```{python}
+
 ```
 
 ```{python}
+
 ```
 
 Compare to parameters with (e.g.) Sklearn.
 
 ```{python}
+
 ```
 
 ## Fitting with weights
@@ -172,6 +185,7 @@ Compare to parameters with (e.g.) Sklearn.
 Statsmodels, weighted regression.
 
 ```{python}
+
 ```
 
 [Sklearn, weighted
@@ -180,20 +194,25 @@ Also see [Wikipedia on weighted
 regression](https://en.wikipedia.org/wiki/Weighted_least_squares).
 
 ```{python}
+
 ```
 
 The `minimize` cost function for weighted regression:
 
 ```{python}
+
 ```
 
 ```{python}
+
 ```
 
 ```{python}
+
 ```
 
 ```{python}
+
 ```
 
 ## Penalized regression
@@ -206,14 +225,17 @@ with try and minimize the sum of squared residuals _and_ the sum of squares
 of the parameters (apart from the intercept).
 
 ```{python}
+
 ```
 
 Fit with the `minimize` cost function:
 
 ```{python}
+
 ```
 
 ```{python}
+
 ```
 
 ## Cross-validation
@@ -234,20 +256,24 @@ def drop_and_predict(df, x_cols, y_col, to_drop):
 Fit the larger model, with "Easiness", and drop / predict each "Quality" value.
 
 ```{python}
+
 ```
 
 Calculate the sum of squared error:
 
 ```{python}
+
 ```
 
 Fit the smaller model, omitting "Easiness", and drop / predict each "Quality"
 value.
 
 ```{python}
+
 ```
 
 How is the sum of squared error for this reduced model?
 
 ```{python}
+
 ```
