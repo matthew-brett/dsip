@@ -35,6 +35,15 @@ df = df.rename(columns={'Overall Quality': 'Quality'})
 df
 ```
 
+Fetch some columns of interest:
+
+```{python}
+# This will be our y (the variable we predict).
+quality = df['Quality']
+# One of both of these will be our X (the predictors).
+clarity_easiness = df[['Clarity', 'Easiness']]
+```
+
 Fit the model with Statsmodels.
 
 ```{python}
@@ -46,9 +55,6 @@ sm_fit.summary()
 Fit the same model with Scikit-learn.
 
 ```{python}
-quality = df['Quality']
-clarity_easiness = df[['Clarity', 'Easiness']]
-
 sk_fit = sklm.LinearRegression().fit(clarity_easiness, quality)
 sk_fit.coef_
 ```
@@ -273,6 +279,8 @@ wls_fit.params
 
 Penalized regression is where you simultaneously minimize some cost related to the model (mis-)fit, and some cost related to the parameters of your model.
 
+### Ridge regression
+
 For example, in [ridge
 regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html),
 with try and minimize the sum of squared residuals _and_ the sum of squares
@@ -298,6 +306,60 @@ def sos_ridge(params, X, y, alpha):
 alpha = 1.0
 res_ridge = minimize(sos_ridge, [0, 0, 0], args=(clarity_easiness, quality, alpha))
 res_ridge.x
+```
+
+### LASSO
+
+
+See the [Scikit-learn LASSO page](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html).
+
+As noted there, the cost function is:
+
+$$
+\frac{1}{2 * \text{n_samples}} * ||y - Xw||^2_2 + alpha * ||w||_1
+$$
+
+where:
+
+$$
+||y - Xw||^2_2
+$$
+
+is the L2 vector norm, squared, which is the sum of squares of the residuals,
+and
+
+$$
+||w||_1
+$$
+
+is the L1 vector norm, which is the same as the sum of the absolute values of
+the parameters.
+
+Let's do that, with a low `alpha` (otherwise both slopes get forced down to zero):
+
+```{python}
+sk_lasso = sklm.LassoLars(alpha=0.01).fit(clarity_easiness, quality)
+
+sk_lasso.coef_, sk_lasso.intercept_
+```
+
+```{python}
+def sos_lasso(params, X, y, alpha):
+    n_samples = len(y)
+    residuals = y - calc_fitted(params, X)
+    ss_resid = np.sum(residuals ** 2)
+    penalty = np.sum(np.abs(params[:-1]))
+    return 1 / (2 * n_samples) * ss_resid + alpha * penalty
+```
+
+```{python}
+res_lasso = minimize(sos_lasso, [0, 0, 0], args=(clarity_easiness, quality, 0.01))
+                     method='powell', tol=1e-10)
+res_lasso
+```
+
+```{python}
+res_lasso.x
 ```
 
 ## Cross-validation
