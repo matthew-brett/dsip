@@ -313,29 +313,36 @@ res_ridge.x
 
 See the [Scikit-learn LASSO page](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html).
 
+
 As noted there, the cost function is:
 
 $$
 \frac{1}{2 * \text{n_samples}} * ||y - Xw||^2_2 + alpha * ||w||_1
 $$
 
-where:
+$w$ refers to the vector of model parameters.
+
+This part of the equation:
 
 $$
 ||y - Xw||^2_2
 $$
 
-is the L2 vector norm, squared, which is the sum of squares of the residuals,
-and
+is the sum of squares of the residuals, because the residuals are $y - Xw$
+(where $w$ are the parameters of the model, and $Xw$ are therefore the fitted
+values), and the $||y - Xw||^2_2$ refers to the squared [L2 vector
+norm](https://mathworld.wolfram.com/L2-Norm.html), which is the same as the
+sum of squares.
 
 $$
 ||w||_1
 $$
 
-is the L1 vector norm, which is the same as the sum of the absolute values of
-the parameters.
+is the [L1 vector norm](https://mathworld.wolfram.com/L1-Norm.html) of the
+parameters $w$, which is the sum of the absolute values of the parameters.
 
-Let's do that, with a low `alpha` (otherwise both slopes get forced down to zero):
+Let's do that calculation, with a low `alpha` (otherwise both slopes get
+forced down to zero):
 
 ```{python}
 sk_lasso = sklm.LassoLars(alpha=0.01).fit(clarity_easiness, quality)
