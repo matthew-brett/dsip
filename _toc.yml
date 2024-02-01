@@ -28,6 +28,7 @@ parts:
   - file: multiple_predictors_statistical_adjustment
   - file: logistic_regression_cross_validation
   - file: weighted_least_squares
+  - file: matrix_notation
 - caption: Classification
   chapters:
   - file: naive_bayes
