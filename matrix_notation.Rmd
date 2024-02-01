@@ -150,8 +150,8 @@ sy_x_val = Matrix([sy_x_ind[i] for i in vector_indices])
 Eq(sy_x, Eq(sy_x_val, Matrix(x)), evaluate=False)
 ```
 
-In [regression notation](regression_notation.Rmd), we wrote our straight line
-model as:
+In [regression notation](lin_regression_notation.md), we wrote our straight
+line model as:
 
 $y_i = bx_i + c + e_i$
 
