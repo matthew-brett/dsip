@@ -52,7 +52,7 @@ notation](lin_regression_notation.md), predicting "prestige" scores for
 professions, from various other measures.
 
 ```{python}
-df = pd.read_csv('data/Duncan_Occupational_prestige_Reduced.csv')
+df = pd.read_csv('data/Duncan_Occupational_Prestige_Reduced.csv')
 df
 ```
 
