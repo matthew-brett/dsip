@@ -27,7 +27,7 @@ parts:
   - file: linear_regression_categorical_predictors
   - file: multiple_predictors_statistical_adjustment
   - file: logistic_regression_cross_validation
-  - file: weighted_least_squares
+  - file: cost_functions
   - file: matrix_notation
 - caption: Classification
   chapters:
