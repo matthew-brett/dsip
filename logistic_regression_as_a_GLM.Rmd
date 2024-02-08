@@ -660,7 +660,7 @@ This is how the "matching" process works:
 Let's convince ourselves the above is true, using some python code, representing this hypothetical passenger (try changing the passenger's actual `survived` score on the first line, to see how this affects their likelihood score:
 
 ```{python}
-# set the passenger's `survived` score
+# set the passenger's `survived` score (this will also work if you set this equal to True or False)
 passengers_actual_survived_score = 1
 
 # the predicted probability of survival, for this passenger
@@ -905,9 +905,16 @@ However, if we look at the statsmodels output, you'll see "pseudo-R Squared" rep
 fitted_log_reg_mod_single_predictor.summary()
 ```
 
-There are actually lots of "pseudo-R Squared"'s for logistic regression ([see here](https://stats.oarc.ucla.edu/other/mult-pkg/faq/general/faq-what-are-pseudo-r-squareds/)). These metrics let us make model comparisons between different logistic regression models (e.g. models with different combinations of predictors) similarly to how we would use R Squared for the same task in linear regression.
+```{python}
+# inspect the statsmodels output for the to predictor model
+fitted_log_reg_mod.summary()
+```
 
-We'll focus on one of the pseudo R squared metrics called "Count R Squared". This isn't the one that statsmodels reports, but this one has the virture of being simple to understand and compute. It also exposes a "Culture One vs Culture Two" difference. In Culture Two, this metric is referred to as "accuracy":
+There are actually lots of "pseudo-R Squared"'s for logistic regression ([see here](https://stats.oarc.ucla.edu/other/mult-pkg/faq/general/faq-what-are-pseudo-r-squareds/)). These metrics let us make model comparisons between different logistic regression models (e.g. models with different combinations of predictors) similarly to how we would use R Squared for the same task in linear regression
+
+On the basis of the Pseudo R-squared reported by `statsmodels`, we should prefer the two predictor model.
+
+However, for clarity, we'll focus on one of the pseudo-R squared metrics called "Count R Squared". This isn't the one that statsmodels reports, but this one has the virture of being simple to understand and compute. It also exposes a "Culture One vs Culture Two" difference. In Culture Two, this metric is referred to as "accuracy":
 
 $\Large \text{Count R Squared} = \text{accuracy} = \frac{\text{number of correct predictions}}{\text{number of predictions}} $
 
@@ -1283,7 +1290,7 @@ fare_age_gender_log_reg.aic
 
 What do we do when the AIC and cross-validation conflict, with regard to the "best" model?
 
-There is a bit of choice involved here as to which metric to favour, see this stats.stackexchange discussion for [more](https://stats.stackexchange.com/questions/578982/model-selection-aic-bic-and-cross-validation-gives-different-conclusion)
+There is a bit of choice involved here as to which metric to favour, see this [stackexchange discussion for more](https://stats.stackexchange.com/questions/578982/model-selection-aic-bic-and-cross-validation-gives-different-conclusion).
 
 This is why it is sometimes said that model-building is an art as well as a science.
 
