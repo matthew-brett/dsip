@@ -579,9 +579,8 @@ We can see that the log loss is high (high prediction error) if the predicted pr
 
 Likelihood and log loss are different perspectives/transformations of the same thing:
 
-- we want likelihood to be high; we want to *maximise* the likelihood function (multiplying together the "matching" probabilities)
-- we want log loss to be low; we want to *minimize* the loss function (aka the negative log likelihood/cost function/loss function)t{died})_i$mple.
-\]
+- we want likelihood to be high; we want to *maximize* the likelihood function (multiplying together the "matching" probabilities)
+- we want log loss to be low; we want to *minimize* the loss function (aka the negative log likelihood/cost function)
 
 
 
@@ -874,7 +873,7 @@ goodness-of-fit to complexity (more on this later)!.
 <!-- #region -->
 ## Pseudo R-Squared
 
-In linear regression, we've seen that we can use the R Squared metric to compare different models.
+In linear regression, we've seen that we can use the R-Squared metric to compare different models.
 
 R Squared itself is given by the following formulas:
 
@@ -897,7 +896,7 @@ Remember, we want to compare between two models:
 
 Unfortunately, it is not possible to calculate R squared for logistic regression in the same way as we can for linear regression.
 
-However, if we look at the statsmodels output, you'll see "pseudo-R Squared" reported:
+However, if we look at the statsmodels output, you'll see "pseudo R-Squared" reported:
 <!-- #endregion -->
 
 ```{python}
@@ -906,7 +905,7 @@ fitted_log_reg_mod_single_predictor.summary()
 ```
 
 ```{python}
-# inspect the statsmodels output for the to predictor model
+# inspect the statsmodels output for the two predictor model
 fitted_log_reg_mod.summary()
 ```
 
@@ -1084,7 +1083,7 @@ More accuracy is not always better: remember that a complex model is more likely
 
 We'll now turn to another useful metric for making these sorts of model comparisons, which penalizes model complexity. Essentially it asks "is this extra goodness-of-fit worth the extra complexity cost?". It's general purpose, in that the same metric can be used for any type of generalized linear model, it's easy to interpret and easy to visualise: the Akaike Information Criterion.
 
-*Note:* though the Count R Squared we looked at above is "dumb" with regard to assessing model complexity, the Pseudo R Squared metric that statmodels reports by default [*does* include penalty for model complexity](https://www.statsmodels.org/dev/generated/statsmodels.genmod.generalized_linear_model.GLMResults.pseudo_rsquared.html). 
+**Note:** though the Count R Squared we looked at above is "dumb" with regard to assessing model complexity, the Pseudo R Squared metric that statmodels reports by default [*does* include penalty for model complexity](https://www.statsmodels.org/dev/generated/statsmodels.genmod.generalized_linear_model.GLMResults.pseudo_rsquared.html). 
 
 
 ## Akaike Information Criterion
@@ -1170,9 +1169,11 @@ This is where we use a variety of different test/train splits on the same datase
 
 Here is an illustration, each block represents the whole sample, the white part is the training set, and the blue part is the test set.
 
-![](images/cross-validation.png)
+![](images/cross-validation.png) 
 
-Through fitting a model to each "fold" of the cross-validation (e.g. fitting the model to the training component, and then evaluating it against the test component, on each trial) we get a better estimate of how well the model will generalize to unseen data.
+(Image from: [here](https://jakevdp.github.io/PythonDataScienceHandbook/05.03-hyperparameters-and-model-validation.html))
+
+Through fitting a model to each "fold" of the cross-validation (e.g. fitting the model to the training component, and then evaluating it against the test component, on each trial) we get a better estimate of how well the model will generalize to unseen data. E.g. if one of the models consistently performs better over multiple cross-validation folds, we can be more confident it is a better model, and that the improved accuracy does not come from overfitting.
 
 The code cell below performs the cross-validation:
 
@@ -1292,8 +1293,15 @@ What do we do when the AIC and cross-validation conflict, with regard to the "be
 
 There is a bit of choice involved here as to which metric to favour, see this [stackexchange discussion for more](https://stats.stackexchange.com/questions/578982/model-selection-aic-bic-and-cross-validation-gives-different-conclusion).
 
-This is why it is sometimes said that model-building is an art as well as a science.
+This is why it is sometimes said that model-building is an art as well as a science!
 
+The answer will depend on the purpose of your model, the use of other available metrics, but ultimately it is a decision for the data analyst...
+
+```{python}
+fare_age_gender_log_reg = smf.logit('survived_dummy ~ fare + age + gender_dummy', data = df).fit()
+
+fare_age_gender_log_reg.aic
+```
 
 ## Cross-validation to compare different types of model
 
