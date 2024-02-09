@@ -1,5 +1,6 @@
 ---
 jupyter:
+  orphan: true
   jupytext:
     formats: ipynb,Rmd
     text_representation:
@@ -24,12 +25,22 @@ On this page we will cover:
 - logistic regression models with multiple predictors
 - model building via predictor/feature selection
 
-In data science, typically we have a sample of observational units, and we are
-interested in the underlying population from which those observational units
-were drawn.(Note: this is quite a "culture one" phrasing of the general situation.
-In "culture two" prractitioners would say we typically have our dataset of specific observations as we are interested in training a model that makes good predictions about as-of-yet-unseen observations from the same population...). 
+In data science, typically we have a sample of observational units, and
+we are interested in the underlying population from which those
+observational units were drawn.(Note: this is quite a "culture one"
+phrasing of the general situation. In "culture two" practitioners would
+say we typically have our dataset of specific observations as we are
+interested in training a model that makes good predictions about
+as-of-yet-unseen observations from the same population...). 
 
-When we include multiple predictors (aka features) the number of potential models we can fit increases rapidly (e.g. by including different combinations of predictors). However, we would like our model to be *parsimonious* - we would like it to explain and predict well without containing needless complexity. If a model is too complex it can fit to noise which exists in our sample but which is unreflective of the population from which the sample came, and as a result the model may generalise poorly to new data, producing bad predictions.
+When we include multiple predictors (aka features) the number of
+potential models we can fit increases rapidly (e.g. by including
+different combinations of predictors). However, we would like our model
+to be *parsimonious* - we would like it to explain and predict well
+without containing needless complexity. If a model is too complex it can
+fit to noise which exists in our sample but which is unreflective of the
+population from which the sample came, and as a result the model may
+generalise poorly to new data, producing bad predictions.
 
 On this page we will do the following:
 
@@ -213,7 +224,7 @@ So, in mathematical notation:
 
 $ \hat{\text{log odds} (y_{i} == 1)} = b_0 + b_1 x_1 $
 
-Which reads in english as "the predicted log odds of observation $i$ scoring 1 on the outcome variable (e.g. the log odds of that specific passenger surviving, conditional on their score on the predictor).
+Which reads in English as "the predicted log odds of observation $i$ scoring 1 on the outcome variable (e.g. the log odds of that specific passenger surviving, conditional on their score on the predictor).
 
 We generally don't really care about the log odds - they are just a useful way to let us use linear regression machinery for a different type of outcome variable. Generally, what we actually care about are the odds and probabilities of scoring 1 on the outcome variable (in this case, the odds and probability of a passenger surviving).
 
