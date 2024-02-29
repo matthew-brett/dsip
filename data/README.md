@@ -22,3 +22,10 @@ From <https://allisonhorst.github.io/palmerpenguins>, via R, using:
 > install.packages('palmerpenguins')
 > library(palmerpenguins)
 > write.csv(penguins, 'penguins.csv', row.names=FALSE)
+
+## ECG data
+
+ECG data `ecg.csv` is an example single-lead electrocardiogram time course from
+a training file at <https://physionet.org/content/challenge-2017/1.0.0>, shared
+under a Creative Commons Attribution license.  See
+<https://github.com/odsti/datasets/tree/main/ecg> for details.
