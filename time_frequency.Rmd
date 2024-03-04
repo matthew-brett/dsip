@@ -409,7 +409,7 @@ Where:
 
 * $N$ is the number of the elements in the original 1D array (and in the array of Fourier coefficients).
 * $\vec{x} = [x_0, x_1, ..., x_{N-1}]$ is the original 1D array (`ecg_arr` in our case).
-* $\vec{X} = [X_0, X_1, ..., X_{N-1}]$ is the array of complex Fourier coefficients (`ft_ecg` in our case).
+* $\vec{X} = [X_0, X_1, ..., X_{N-1}]$ is the 1D array of complex Fourier coefficients (`ft_ecg` in our case).
 
 ```{python}
 k = np.arange(N)
@@ -423,4 +423,24 @@ for n in np.arange(N):
 ```{python}
 ft_back_with_e = ft_ecg.dot(e_basis) / N
 np.allclose(ft_back_with_e.real, ecg_arr)
+```
+
+In fact the forward transform is almost identical in form:
+
+$$
+X_k = \sum_{n=0}^{N-1} x_n \; e^{-i 2 \pi \frac{k}{N} n}
+$$
+
+Just for completeness, let's do the forward transform without using `fft`, but implementing the formula above:
+
+```{python}
+forward_e_basis = np.zeros((N, N), dtype=complex)
+for n in np.arange(N):
+    # Each row allows us to implement one summation in the formula.
+    forward_e_basis[n] = np.e ** (-1j * 2 * np.pi * k / N * n)
+    
+# Recalculate the FT, using the basis functions.
+ft_forward_e = ecg_arr.dot(forward_e_basis)
+# It's (near as dammit) the same as the fft coefficients.
+np.allclose(ft_forward_e, ft_ecg)
 ```
