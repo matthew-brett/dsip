@@ -413,8 +413,10 @@ Where:
 
 ```{python}
 k = np.arange(N)
+# One row per n in 0 ... N-1 in the formula above.
 e_basis = np.zeros((N, N), dtype=complex)
 for n in np.arange(N):
+    # Each row allows us to implement one summation in the formula.
     e_basis[n] = np.e ** (1j * 2 * np.pi * k / N * n)
 ```
 
