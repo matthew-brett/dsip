@@ -46,7 +46,7 @@ We want to find $c$ such that $\vec{w} - c \vec{v}$ is perpendicular
 to $\vec{v}$.
 
 Two perpendicular vectors have [vector dot product of
-zero](on_vectors#orthogonal_dot) so:
+zero](on_vectors#orthogonal-dot) so:
 
 $$(\vec{w} - c \vec{v}) \cdot \vec{v} = 0$$
 
