@@ -17,9 +17,11 @@ parts:
   - file: lambda_functions
 - caption: Reading formulae
   chapters:
+  - file: on_vectors
   - file: numpy_and_vectors
   - file: algebra_of_sums
   - file: lin_regression_notation
+  - file: vector_projection
 - caption: Intermediate regression
   chapters:
   - file: lin_regression_multiple_predictors
