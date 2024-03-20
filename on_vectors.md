@@ -134,7 +134,8 @@ $$\begin{aligned}
 g^2  \\| \vec{v} \|^2 = 1
 \end{aligned}$$
 
-## If two vectors are perpendicular, their dot product is 0 {#orthogonal-dot}
+{orthogonal-dot}=
+## If two vectors are perpendicular, their dot product is 0
 
 I based this proof on that in Gilbert Strang's "Introduction to Linear
 Algebra" 4th edition, page 14.
