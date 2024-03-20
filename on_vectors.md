@@ -134,11 +134,12 @@ $$\begin{aligned}
 g^2  \\| \vec{v} \|^2 = 1
 \end{aligned}$$
 
-{orthogonal-dot}=
+(orthogonal-dot)=
 ## If two vectors are perpendicular, their dot product is 0
 
-I based this proof on that in Gilbert Strang's "Introduction to Linear
-Algebra" 4th edition, page 14.
+I based this proof on that in [Gilbert Strang's "Introduction to Linear
+Algebra"](https://math.mit.edu/~gs/linearalgebra/ila5/indexila5.html) 4th
+edition, page 14.
 
 Consider the triangle formed by the two vectors $\vec{v}$ and
 $\vec{w}$. The lengths of the sides of the triangle are $\| \vec{v} \|, \|
