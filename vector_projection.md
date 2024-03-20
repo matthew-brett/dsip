@@ -45,8 +45,8 @@ The \vector connecting $\vec{w}$ and $c \vec{v}$ is $\vec{w} - c
 We want to find $c$ such that $\vec{w} - c \vec{v}$ is perpendicular
 to $\vec{v}$.
 
-Two perpendicular vectors have [vector dot product of
-zero](#orthogonal-dot) so:
+Two perpendicular vectors have a vector dot product of
+zero (see [on vectors](on_vectors)), and so:
 
 $$(\vec{w} - c \vec{v}) \cdot \vec{v} = 0$$
 
@@ -76,8 +76,9 @@ $$\begin{aligned}
 \frac{\vec{w} \cdot \vec{v}}{\\| \vec{v} \|} \vec{u}
 \end{aligned}$$
 
-$\frac{\vec{w} \cdot \vec{v}}{\| \vec{v} \|}$ is called the [scalar projection]()
-of $\vec{w}$ onto $\vec{v}$.
+$\frac{\vec{w} \cdot \vec{v}}{\| \vec{v} \|}$ is called the [scalar
+projection](https://en.wikipedia.org/wiki/Scalar_projection) of $\vec{w}$ onto
+$\vec{v}$.
 
 ## Also see
 
