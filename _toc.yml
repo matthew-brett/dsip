@@ -22,6 +22,7 @@ parts:
   - file: algebra_of_sums
   - file: lin_regression_notation
   - file: vector_projection
+  - file: pca_introduction
 - caption: Intermediate regression
   chapters:
   - file: lin_regression_multiple_predictors
