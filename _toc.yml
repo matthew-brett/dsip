@@ -23,6 +23,7 @@ parts:
   - file: lin_regression_notation
   - file: vector_projection
   - file: pca_introduction
+  - file: pca_dimension_reduction
 - caption: Intermediate regression
   chapters:
   - file: lin_regression_multiple_predictors
